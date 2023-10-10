@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refeição</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Papá do Lee</h1>
+        </header>
+
+        <section>
+            <label for="c1">quantidade de ração no copo:</label>
+            <input type="number" name="" id="c1">
+            <div>
+                <label for="c2">quantidade que o Lee vai comer:</label>
+                <input type="number" name="" id="c2">
+            </div>
+            <input type="button" value="Calcular">
+        </section>
+
+
+
+
+
+    </main>
+   <script>
+    var controle1 = window.document.getElementById('c1')
+    var controle2 = window.document.querySelector('input#c2')
+    var B = window.document.querySelector('input[type="button"]')
+    B.addEventListener('click', Comer)
+
+    function Comer() {
+        if (controle1.value.length > 0) {
+            if (controle2.value.length > 0) {
+                var copo = Number.parseInt(controle1.value)
+                var saco = parseInt(controle2.value)
+                if (copo >= 56) {
+                    window.alert('ok')
+                } else {
+                    window.alert('O copo precisa ter, pelo menos, 56g de ração')
+                }
+
+
+
+
+                
+            } else {
+                window.alert('O Lee precisa comer!')
+            }            
+        } else {
+            window.alert('O copo precisa ter comida!')
+        }
+     
+
+
+
+
+
+
+    }
+
+
+   </script> 
+</body>
+</html>
