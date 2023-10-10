@@ -50,11 +50,71 @@
     var diaM = agora.getDate()
     var mes = agora.getMonth()
     var ano = agora.getFullYear()
+    switch (diaS) {
+        case 0:
+            diaS = 'Domingo'
+            break
+        case 1:
+            diaS = 'Segunda-Feira'  
+            break
+        case 2:
+            diaS = 'Terça-Feira'
+            break
+        case 3:
+            diaS = 'Quarta-Feira'
+            break
+        case 4: 
+            diaS = 'Quinta-Feira'
+            break
+        case 5: 
+            diaS = 'Sexta-Feira'
+            break
+        case 6:
+            diaS = 'Sábado'
+            break
+    }
+
+    switch (mes) {
+        case 0:
+            mes = 'Janeiro'
+            break 
+        case 1: 
+            mes = 'Fevereiro'
+            break
+        case 2: 
+            mes = 'Março'
+            break
+        case 3: 
+            mes = 'Abril'
+            break 
+        case 4: 
+            mes = 'Maio'
+            break
+        case 5: 
+            mes = 'Junho'
+            break
+        case 6: 
+            mes = 'Julho'
+            break 
+        case 7: 
+            mes = 'Agosto'
+            break 
+        case 8: 
+            mes = 'Setembro'
+            break 
+        case 9: 
+            mes = 'Outubro'
+            break 
+        case 10: 
+            mes = 'Novembro'
+            break 
+        case 11: 
+            mes = 'Dezembro'
+            break
+    }
+
     var P3 = window.document.getElementsByClassName('now')[0]
     P3.innerText += ` ${diaS}, ${diaM} de ${mes} de ${ano} / ${h}:${min}:${segs}`
-
-
-
 
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
