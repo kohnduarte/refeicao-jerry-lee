@@ -45,22 +45,31 @@
 
     function Comer() {
         if (controle1.value.length > 0) {
-            if (controle2.value.length > 0) {
-                var copo = Number.parseInt(controle1.value)
-                var saco = parseInt(controle2.value)
-                if (copo >= 56) {
-                    window.alert('ok')
+            var copo = Number.parseInt(controle1.value)
+            if (copo >= 56 && copo < 120) {
+                if (controle2.value.length > 0) {
+                    var comer = parseInt(controle2.value)
+                    if (comer >= 40 && comer <= 50) {
+                        window.alert('ok')
+                    } else {
+                        window.alert('O Lee não pode comer menos que 40g, e nem mais do que 50!')
+                    }
+
                 } else {
-                    window.alert('O copo precisa ter, pelo menos, 56g de ração')
+                    window.alert('O Lee precisa comer!')
                 }
 
 
 
-
-                
+                    
             } else {
-                window.alert('O Lee precisa comer!')
-            }            
+                    window.alert('O copo precisa ter entre 56 e xxxg de ração')
+            }
+
+
+
+
+                        
         } else {
             window.alert('O copo precisa ter comida!')
         }
