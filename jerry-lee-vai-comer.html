@@ -58,8 +58,9 @@
                         P.innerHTML = restante
                         S.appendChild(P)
                         if (restante < 16) {
-                            P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.'
-                            S.appendChild(P2)
+                            var completar = 16 - restante
+                            P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.<br>Sendo assim, é necessário adicionar ' + completar + 'g.'
+                            S.appendChild(P2)                         
                         }
                     } else {
                         window.alert('O Lee não pode comer menos que 40g, e nem mais do que 50!')
