@@ -44,6 +44,7 @@
     var S = window.document.getElementsByTagName('section')[0]
     B.addEventListener('click', Comer)
     var P = window.document.createElement('p')
+    var P2 = window.document.createElement('p')
 
     function Comer() {
         if (controle1.value.length > 0) {
@@ -52,24 +53,33 @@
                 if (controle2.value.length > 0) {
                     var saco = parseInt(controle2.value)
                     if (saco >= 40 && saco <= 50) {
+                        P2.innerHTML = ''
                         var restante = copo - saco
                         P.innerHTML = restante
                         S.appendChild(P)
+                        if (restante < 16) {
+                            P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.'
+                            S.appendChild(P2)
+                        }
                     } else {
                         window.alert('O Lee não pode comer menos que 40g, e nem mais do que 50!')
                         P.innerHTML = ''
+                        P2.innerHTML = ''
                     }
                 } else {
                     window.alert('O Lee precisa comer!')
                     P.innerHTML = ''
+                    P2.innerHTML = ''
                 }                    
             } else {
                     window.alert('O copo precisa ter entre 56 e xxxg de ração')
                     P.innerHTML = ''
+                    P2.innerHTML = ''
             }                        
         } else {
             window.alert('O copo precisa ter comida!')
             P.innerHTML = ''
+            P2.innerHTML = ''
         }
     }
 
