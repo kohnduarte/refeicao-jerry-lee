@@ -41,16 +41,20 @@
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
     var B = window.document.querySelector('input[type="button"]')
+    var S = window.document.getElementsByTagName('section')[0]
     B.addEventListener('click', Comer)
+    var P = window.document.createElement('p')
 
     function Comer() {
         if (controle1.value.length > 0) {
             var copo = Number.parseInt(controle1.value)
             if (copo >= 56 && copo < 120) {
                 if (controle2.value.length > 0) {
-                    var comer = parseInt(controle2.value)
-                    if (comer >= 40 && comer <= 50) {
-                        window.alert('ok')
+                    var saco = parseInt(controle2.value)
+                    if (saco >= 40 && saco <= 50) {
+                        var restante = copo - saco
+                        P.innerHTML = restante
+                        S.appendChild(P)
                     } else {
                         window.alert('O Lee não pode comer menos que 40g, e nem mais do que 50!')
                     }
