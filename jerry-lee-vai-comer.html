@@ -33,7 +33,7 @@
 
     <footer>
         <p><small>&copy;Criado por mim</small></p>
-        <p>Data e hora do acesso:</p>
+        <p class="now">Data e hora do acesso:</p>
     </footer>
 
 
@@ -42,6 +42,20 @@
 
     
    <script>
+    var agora = new Date()
+    var h = agora.getHours()
+    var min = agora.getMinutes()
+    var segs = agora.getSeconds()
+    var diaS = agora.getDay()
+    var diaM = agora.getDate()
+    var mes = agora.getMonth()
+    var ano = agora.getFullYear()
+    var P3 = window.document.getElementsByClassName('now')[0]
+    P3.innerText += ` ${diaS}, ${diaM} de ${mes} de ${ano} / ${h}:${min}:${segs}`
+
+
+
+
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
     var B = window.document.querySelector('input[type="button"]')
