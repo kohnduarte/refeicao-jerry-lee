@@ -26,7 +26,11 @@
             height: 3em;
         }
 
-        input + div {
+        div {
+            position: relative;
+        }
+
+        div + div {
             margin: 1em 0;
         }
 
@@ -41,9 +45,11 @@
     </header>
 
     <section>
-        <label for="c1"><span class="material-symbols-outlined">glass_cup</span>
-        </label>
-        <input type="number" name="" id="c1" min="56" max="105" autofocus>
+        <div>
+            <label for="c1"><span class="material-symbols-outlined">glass_cup</span>
+            </label>
+            <input type="number" name="" id="c1" min="56" max="105" autofocus>
+        </div>
         <div>
             <label for="c2"><span class="material-symbols-outlined">shopping_bag</span>
             </label>
