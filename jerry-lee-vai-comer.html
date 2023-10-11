@@ -14,10 +14,10 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            color: #fff;
         }
 
         header > h1 {
-            color: #fff;
             letter-spacing: 0.1em;
         }
 
@@ -51,7 +51,6 @@
         }
 
         span.material-symbols-outlined {
-            color: #fff;
             font-size: 3em;
             transform: translateX(-70%);
         }
@@ -64,7 +63,6 @@
         }
 
         footer {
-            color: #fff;
             position: absolute;
             left: 50%;
             bottom: 0;
@@ -105,7 +103,7 @@
     var diaM = agora.getDate()
     var mes = agora.getMonth()
     var ano = agora.getFullYear()
-    var h = 20
+    
     var B = window.document.body
     var T = window.document.getElementsByName('tit')[0]
     
@@ -114,7 +112,6 @@
         T.innerText = 'Almoço do Lee'
     } else {
         B.style.backgroundColor = '#000'
-        B.style.color = '#fff'
         T.innerText = 'Jantar do Lee'
     }
 
