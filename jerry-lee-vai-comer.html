@@ -189,6 +189,7 @@
     var P = window.document.createElement('p')
     var P2 = window.document.createElement('p')
     var glass = window.document.getElementsByClassName('material-symbols-outlined')[0]
+    var bag = window.document.getElementsByClassName('material-symbols-outlined')[1]
 
     function Comer() {
         if (controle1.value.length > 0) {
@@ -233,12 +234,17 @@
                     P.innerHTML = ''
                     P2.innerHTML = ''
                     P3.style.display = 'block'
+                    glass.style.color = '#aa1313'
+                    glass.style.transform = 'rotate(1turn) translateX(-70%)'
+
             }                        
         } else {
             window.alert('O copo precisa ter comida!')
             P.innerHTML = ''
             P2.innerHTML = ''
             P3.style.display = 'block'
+            glass.style.color = '#aa1313'
+            glass.style.transform = 'rotate(0.5turn) translateX(70%)'
         }
     }
    </script> 
