@@ -105,7 +105,7 @@
     var diaM = agora.getDate()
     var mes = agora.getMonth()
     var ano = agora.getFullYear()
-    
+    var h = 20
     var B = window.document.body
     var T = window.document.getElementsByName('tit')[0]
     
@@ -113,7 +113,7 @@
         B.style.backgroundColor = '#1e90ff'
         T.innerText = 'Almoço do Lee'
     } else {
-        B.style.background = 'url(img/jantar.jpg) fixed center/cover'
+        B.style.backgroundColor = '#000'
         B.style.color = '#fff'
         T.innerText = 'Jantar do Lee'
     }
