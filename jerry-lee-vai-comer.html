@@ -18,7 +18,7 @@
 </head>
 <body>    
     <header>
-        <h1>Papá do Lee</h1>
+        <h1 name="tit">Papá do Lee</h1>
     </header>
 
     <section>
@@ -35,11 +35,6 @@
         <p class="now">Data e hora do acesso:</p>
         <p><small>&copy;Criado por mim</small></p>
     </footer>
-
-
-
-
-
     
    <script>
     var agora = new Date()
@@ -51,6 +46,18 @@
     var mes = agora.getMonth()
     var ano = agora.getFullYear()
     
+    var B = window.document.body
+    var T = window.document.getElementsByName('tit')[0]
+    
+    if (h >= 6 && h <= 17) {
+        B.style.background = 'url(img/almoco.jpg) fixed center/cover'
+        T.innerText = 'Almoço do Lee'
+    } else {
+        B.style.background = 'url(img/jantar.jpg) fixed center/cover'
+        B.style.color = '#fff'
+        T.innerText = 'Jantar do Lee'
+    }
+
     switch (diaS) {
         case 0:
             diaS = 'Domingo'
