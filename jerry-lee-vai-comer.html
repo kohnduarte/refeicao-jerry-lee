@@ -11,10 +11,6 @@
             padding: 0;
         }
 
-        html, body {
-            width: 99vw;
-        }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
@@ -94,7 +90,7 @@
     </section>
 
     <footer>
-        <p class="now">Data e hora:</p>
+        <p class="now">Data e hora</p>
         <p><small>&copy;Criado por mim</small></p>
     </footer>
     
@@ -183,7 +179,7 @@
     }
 
     var P3 = window.document.getElementsByClassName('now')[0]
-    P3.innerHTML += ` ${diaS}, ${diaM} de ${mes} de ${ano} <br> ${h}:${min}:${segs}`
+    P3.innerHTML = ` ${diaS}, ${diaM} de ${mes} de ${ano} <br> ${h}:${min}:${segs}`
 
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
