@@ -206,7 +206,9 @@
                         S.appendChild(P)
                         P3.style.display = 'block'
                         glass.style.color = '#fff'
-                        glass.style.transform = 'rotate(1turn) translateX(-70%)'
+                        glass.style.transform = 'rotate(1turn) translateX(-70%)' //volta não necessária
+                        bag.style.color = '#fff'
+                        bag.style.transform = 'translateX(-70%)'
                         if (restante < 16) {
                             var completar = 16 - restante
                             P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.<br>Sendo assim, é necessário adicionar ' + completar + 'g.'
@@ -222,12 +224,16 @@
                         P.innerHTML = ''
                         P2.innerHTML = ''
                         P3.style.display = 'block'
+                        bag.style.color = '#aa1313'
+                        bag.style.transform = 'translateX(-70%)'
                     }
                 } else {
                     window.alert('O Lee precisa comer!')
                     P.innerHTML = ''
                     P2.innerHTML = ''
                     P3.style.display = 'block'
+                    bag.style.color = '#aa1313'
+                    bag.style.transform = 'rotate(0.5turn) translateX(70%)'
                 }                    
             } else {
                     window.alert('O copo precisa ter entre 56 e 105g de ração')
