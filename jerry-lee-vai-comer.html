@@ -17,6 +17,7 @@
         }
 
         header > h1 {
+            color: #eeff00;
             letter-spacing: 0.1em;
         }
 
@@ -50,6 +51,7 @@
         }
 
         span.material-symbols-outlined {
+            color: #000;
             font-size: 3em;
             transform: translateX(-70%);
         }
@@ -62,6 +64,7 @@
         }
 
         footer {
+            color: #000;
             position: absolute;
             left: 50%;
             bottom: 0;
@@ -199,10 +202,13 @@
                         P2.innerHTML = ''
                         var restante = copo - saco
                         P.innerHTML = `Peso final do copo: ${restante}`
+                        P.style.fontSize = '1.5em'
+                        P.style.color = '#fff'
                         S.appendChild(P)
                         if (restante < 16) {
                             var completar = 16 - restante
                             P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.<br>Sendo assim, é necessário adicionar ' + completar + 'g.'
+                            P2.style.fontSize = '1.5em'
                             P2.style.color = '#f00'
                             S.appendChild(P2)                         
                         }
