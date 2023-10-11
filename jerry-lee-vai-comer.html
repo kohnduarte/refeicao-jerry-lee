@@ -16,6 +16,10 @@
             text-align: center;
         }
 
+        header > h1 {
+            letter-spacing: 0.1em;
+        }
+
         section {
             width: 80vw;
             margin: auto;
@@ -24,6 +28,17 @@
         input[type="number"] {
             width: 3em;
             height: 3em;
+            position: absolute;
+            border: 1px solid #000;
+            transform: translateX(-50%);
+        }
+
+        input#c1 {
+            top: 9%;
+        }
+
+        input#c2 {
+            top: 15%;
         }
 
         div {
@@ -36,6 +51,14 @@
 
         span.material-symbols-outlined {
             font-size: 3em;
+            transform: translateX(-70%);
+        }
+
+        input[type="button"] {
+            padding: 6px 10px 6px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
         }
 
         footer {
@@ -66,7 +89,7 @@
     </section>
 
     <footer>
-        <p class="now">Data e hora do acesso:</p>
+        <p class="now">Data e hora:</p>
         <p><small>&copy;Criado por mim</small></p>
     </footer>
     
@@ -156,7 +179,7 @@
     }
 
     var P3 = window.document.getElementsByClassName('now')[0]
-    P3.innerText += ` ${diaS}, ${diaM} de ${mes} de ${ano} / ${h}:${min}:${segs}`
+    P3.innerHTML += ` ${diaS}, ${diaM} de ${mes} de ${ano} <br> ${h}:${min}:${segs}`
 
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
