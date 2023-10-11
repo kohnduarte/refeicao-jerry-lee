@@ -188,6 +188,7 @@
     B.addEventListener('click', Comer)
     var P = window.document.createElement('p')
     var P2 = window.document.createElement('p')
+    var glass = window.document.getElementsByClassName('material-symbols-outlined')[0]
 
     function Comer() {
         if (controle1.value.length > 0) {
@@ -203,13 +204,17 @@
                         P.style.color = '#fff'
                         S.appendChild(P)
                         P3.style.display = 'block'
+                        glass.style.color = '#fff'
+                        glass.style.transform = 'rotate(1turn) translateX(-70%)'
                         if (restante < 16) {
                             var completar = 16 - restante
                             P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.<br>Sendo assim, é necessário adicionar ' + completar + 'g.'
                             P2.style.fontSize = '1.5em'
                             P2.style.color = '#aa1313'
                             S.appendChild(P2)
-                            P3.style.display = 'none'                    
+                            P3.style.display = 'none'             
+                            glass.style.transform = 'rotate(0.5turn) translateX(70%)'
+                            glass.style.color = '#aa1313'
                         }
                     } else {
                         window.alert('O Lee não pode comer menos que 40g, e nem mais do que 50!')
