@@ -69,9 +69,11 @@
             transform: translateX(-50%);
         }
 
-        @media screen and (orientation: landscape) {
-            body {
-                
+        /* Esse "programinha" foi feito com o intuito de ser utilizado no celular. A Media Query abaixo tem como único objetivo melhorar a exibição em celulares que estejam com a tela deitada (modo paisagem). Não coloquei '(orientation: landscape)' porque isso afetaria telas maiores, como laptops e desktops.  */
+
+        @media screen and (min-width: 650px) and (max-width: 800px) {
+            div#flut {
+                float: left;
             }
         }
 
@@ -83,17 +85,19 @@
     </header>
 
     <section>
-        <div>
-            <label for="c1"><span class="material-symbols-outlined">glass_cup</span>
-            </label>
-            <input type="number" name="" id="c1" min="56" max="105" autofocus>
+        <div id="flut">
+            <div>
+                <label for="c1"><span class="material-symbols-outlined">glass_cup</span>
+                </label>
+                <input type="number" name="" id="c1" min="56" max="105" autofocus>
+            </div>
+            <div>
+                <label for="c2"><span class="material-symbols-outlined">shopping_bag</span>
+                </label>
+                <input type="number" name="" id="c2" min="40" max="50">
+            </div>
+            <input type="button" value="Calcular">
         </div>
-        <div>
-            <label for="c2"><span class="material-symbols-outlined">shopping_bag</span>
-            </label>
-            <input type="number" name="" id="c2" min="40" max="50">
-        </div>
-        <input type="button" value="Calcular">
     </section>
 
     <footer>
