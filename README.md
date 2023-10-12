@@ -22,4 +22,4 @@ HTML, CSS e principalmente JavaScript.
 
 <a href="https://kohnduarte.github.io/refeicao-jerry-lee/jerry-lee-vai-comer.html" rel="next" target="_self">Vamos lá!</a>
 
-<img src="jerry-lee.JPG" alt="imagem do Jerry Lee comemorando seu sétimo aniversário">
+<img src="jerry-lee.JPG" alt="imagem do Jerry Lee comemorando seu sétimo aniversário" title="Jerry Lee comemorando seu sétimo aniversário">
