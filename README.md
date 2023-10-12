@@ -21,3 +21,5 @@ esse exercício foi construído com apenas 1 objetivo: praticar
 HTML, CSS e principalmente JavaScript.
 
 <a href="https://kohnduarte.github.io/refeicao-jerry-lee/jerry-lee-vai-comer.html" rel="next" target="_self">Vamos lá!</a>
+
+<img src="jerry-lee.JPG" alt="imagem do Jerry Lee comemorando seu sétimo aniversário">
