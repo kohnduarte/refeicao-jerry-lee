@@ -19,3 +19,5 @@ Vou colocar ração no saco até o copo pesar 42g.
 É ÓBVIO que esse cálculo é muito fácil e eu o faço de cabeça,
 esse exercício foi construído com apenas 1 objetivo: praticar 
 HTML, CSS e principalmente JavaScript.
+
+<a href="https://kohnduarte.github.io/refeicao-jerry-lee/jerry-lee-vai-comer.html" rel="next" target="_self">Vamos lá!</a>
