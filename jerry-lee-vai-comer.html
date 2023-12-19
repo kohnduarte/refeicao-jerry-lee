@@ -107,9 +107,7 @@
     
    <script>
     var agora = new Date()
-    var h = agora.getHours()
-    var min = agora.getMinutes()
-    var segs = agora.getSeconds()
+    var h = agora.getHours()    
     var diaS = agora.getDay()
     var diaM = agora.getDate()
     var mes = agora.getMonth()
@@ -190,7 +188,7 @@
     }
 
     var P3 = window.document.getElementsByClassName('now')[0]
-    P3.innerHTML = ` ${diaS}, ${diaM} de ${mes} de ${ano} <br> ${h}:${min}:${segs}`
+    P3.innerHTML = ` ${diaS}, ${diaM} de ${mes} de ${ano} <br> ${new Date().toLocaleTimeString()}`
 
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
