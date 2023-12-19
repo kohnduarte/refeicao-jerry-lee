@@ -105,9 +105,8 @@
         <p><small>&copy; Criado por mim</small></p>
     </footer>
     
-   <script>
-    var agora = new Date()
-    var h = agora.getHours()    
+   <script>    
+    var agora = new Date()        
     var diaS = agora.getDay()
     var diaM = agora.getDate()
     var mes = agora.getMonth()
@@ -117,13 +116,20 @@
     var T = window.document.getElementsByName('tit')[0]
     var P3 = window.document.getElementsByClassName('now')[0]
     
-    if (h >= 6 && h <= 17) {
+    function fundoEtitulo() {
+        var h = new Date().getHours()
+        if (h >= 6 && h <= 17) {
         B.style.backgroundColor = '#1e90ff'
         T.innerText = 'Almoço do Lee'
-    } else {
+        } else {
         B.style.backgroundColor = '#000'
         T.innerText = 'Jantar do Lee'
     }
+    }
+
+    fundoEtitulo()
+
+    setInterval(fundoEtitulo, 1000)
 
     switch (diaS) {
         case 0:
@@ -198,9 +204,9 @@
 
     var controle1 = window.document.getElementById('c1')
     var controle2 = window.document.querySelector('input#c2')
-    var B = window.document.querySelector('input[type="button"]')
+    var botao = window.document.querySelector('input[type="button"]')
     var S = window.document.getElementsByTagName('section')[0]
-    B.addEventListener('click', Comer)
+    botao.addEventListener('click', Comer)
     var P = window.document.createElement('p')
     var P2 = window.document.createElement('p')
     var glass = window.document.getElementsByClassName('material-symbols-outlined')[0]
@@ -227,6 +233,7 @@
                         bag.style.color = '#fff'
                         bag.style.transform = 'translateX(-70%)'
                         if (restante < 16) {
+                            controle1.focus()
                             var completar = 16 - restante
                             P2.innerHTML = ' Quantidade insuficiente de ração no copo. O peso final dele deve ser, no mínimo, 16g.<br>Sendo assim, é necessário adicionar ' + completar + 'g.'
                             P2.style.fontSize = '1.5em'
