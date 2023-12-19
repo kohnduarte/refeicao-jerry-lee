@@ -234,6 +234,8 @@
                         }
                     } else {
                         window.alert('O Lee não pode comer menos que 40g, e nem mais do que 50!')
+                        controle2.value = ''
+                        controle2.focus()
                         P.innerHTML = ''
                         P2.innerHTML = ''
                         P3.style.display = 'block'
@@ -242,6 +244,7 @@
                     }
                 } else {
                     window.alert('O Lee precisa comer!')
+                    controle2.focus()
                     P.innerHTML = ''
                     P2.innerHTML = ''
                     P3.style.display = 'block'
@@ -250,6 +253,8 @@
                 }                    
             } else {
                     window.alert('O copo precisa ter entre 56 e 105g de ração')
+                    controle1.value = ''
+                    controle1.focus()
                     P.innerHTML = ''
                     P2.innerHTML = ''
                     P3.style.display = 'block'
@@ -260,6 +265,7 @@
             }                        
         } else {
             window.alert('O copo precisa ter comida!')
+            controle1.focus()
             P.innerHTML = ''
             P2.innerHTML = ''
             P3.style.display = 'block'
